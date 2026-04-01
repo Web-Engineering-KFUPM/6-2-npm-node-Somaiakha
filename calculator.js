@@ -96,7 +96,10 @@ Hints:
 Example:
   const operation = process.argv[2];
   const numbers = process.argv.slice(3);
-
+*/
+const operation = process.argv[2];
+const numbers = process.argv.slice(3);
+/*
 ===================================================================
 TODO 3: Validate Input and Calculate (in calculator.js)
 ===================================================================
@@ -217,9 +220,6 @@ After completing all TODOs, test your calculator:
 
 
 
-// TODO 2: Parse Command Line Arguments
-const operation = process.argv[2];
-const numbers = process.argv.slice(3);
 
 // TODO 3: Validate Input and Calculate
 if (!isValidOperation(operation)) {
