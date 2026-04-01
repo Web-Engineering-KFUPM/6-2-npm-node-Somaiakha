@@ -128,7 +128,32 @@ Example structure:
   }
 
   console.log(`Result: ${result}`);
+*/
+if (!isValidOperation(operation)) {
+  console.log("Invalid operation. Use: add, subtract, multiply, or divide");
+  process.exit(1);
+}
 
+const nums = parseNumbers(numbers);
+let result;
+
+switch (operation) {
+  case "add":
+    result = add(nums);
+    break;
+  case "subtract":
+    result = subtract(nums);
+    break;
+  case "multiply":
+    result = multiply(nums);
+    break;
+  case "divide":
+    result = divide(nums);
+    break;
+}
+
+console.log(`Result: ${result}`);
+/*
 ===============================================================
 TODO 4: Create Math Operation Functions (in utils/operations.js)
 ===============================================================
@@ -221,28 +246,3 @@ After completing all TODOs, test your calculator:
 
 
 
-// TODO 3: Validate Input and Calculate
-if (!isValidOperation(operation)) {
-  console.log("Invalid operation. Use: add, subtract, multiply, or divide");
-  process.exit(1);
-}
-
-const nums = parseNumbers(numbers);
-let result;
-
-switch (operation) {
-  case "add":
-    result = add(nums);
-    break;
-  case "subtract":
-    result = subtract(nums);
-    break;
-  case "multiply":
-    result = multiply(nums);
-    break;
-  case "divide":
-    result = divide(nums);
-    break;
-}
-
-console.log(`Result: ${result}`);
